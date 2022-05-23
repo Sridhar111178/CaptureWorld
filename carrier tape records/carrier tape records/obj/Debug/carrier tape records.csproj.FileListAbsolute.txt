@@ -1,0 +1,28 @@
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\bin\Debug\carrier tape records.exe.config
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\bin\Debug\carrier tape records.exe
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\bin\Debug\carrier tape records.pdb
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\Interop.LCC11.dll
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\Interop.Office.dll
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.ResolveComReference.cache
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier_tape_records.Form1.resources
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier_tape_records.Properties.Resources.resources
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.GenerateResource.cache
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.CoreCompileInputs.cache
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.exe
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.pdb
+C:\Users\11084044\source\repos\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csprojAssemblyReference.cache
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\bin\Debug\carrier tape records.exe.config
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\bin\Debug\carrier tape records.exe
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\bin\Debug\carrier tape records.pdb
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\Interop.LCC11.dll
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.ResolveComReference.cache
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier_tape_records.Form1.resources
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier_tape_records.Properties.Resources.resources
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.GenerateResource.cache
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csproj.CoreCompileInputs.cache
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.exe
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.pdb
+C:\Users\11084044\Desktop\carrier tape records\carrier tape records\obj\Debug\carrier tape records.csprojAssemblyReference.cache

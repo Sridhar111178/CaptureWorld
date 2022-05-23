@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc9c58ab-c14f-4f46-8450-a246068a819b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://168.232.225.162:87/TRServices/TRService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TRService.xsd" MetadataType="Schema" ID="b0ff08cb-95a6-4b8f-9ec3-a67ff71f7686" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TRService1.xsd" MetadataType="Schema" ID="47fc08da-5fd7-48ed-9e8d-89a055f3e9c1" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TRService.disco" MetadataType="Disco" ID="db122a62-5452-4d3e-a49a-4b3770642e5d" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?disco" />
+    <MetadataFile FileName="TRService2.xsd" MetadataType="Schema" ID="fa3ae40a-2c47-4491-9e69-7a9e7a1712d8" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TRService.wsdl" MetadataType="Wsdl" ID="fa44d942-cef9-463f-987a-6502f12522fc" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?wsdl" />
+    <MetadataFile FileName="TRService3.xsd" MetadataType="Schema" ID="0a8e7a42-8180-4d5d-9748-acc8f186c36a" SourceId="1" SourceUrl="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

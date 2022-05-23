@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" />
+  <xs:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetJSDetailsByJSName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsByJSNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSDetailsByJSNameResult" nillable="true" type="q1:ArrayOfJOBSPCSMASTER_ICOS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveJSNames">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActiveJSNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetActiveJSNamesResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailByJSName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailByJSNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSDetailByJSNameResult" nillable="true" type="q3:JOBSPCSMASTER_ICOS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailByJSID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailByJSIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSDetailByJSIDResult" nillable="true" type="q4:JOBSPCSMASTER_ICOS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSDetail" nillable="true" type="q5:JOBSPCSMASTER_ICOS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddJSDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSDetail" nillable="true" type="q6:JOBSPCSMASTER_ICOS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJSDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSDetailID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveJSDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamDetailsByJSRef">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSRef" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamDetailsByJSRefResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetParamDetailsByJSRefResult" nillable="true" type="q7:ArrayOfJOBSPCMASTER_ICOS_PARAMS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamDetailByPID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParamDetailByPIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetParamDetailByPIDResult" nillable="true" type="q8:JOBSPCMASTER_ICOS_PARAMS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSParamDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSParamDetail" nillable="true" type="q9:JOBSPCMASTER_ICOS_PARAMS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSParamDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddJSParamDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSParamDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSParamDetails" nillable="true" type="q10:ArrayOfJOBSPCMASTER_ICOS_PARAMS_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSParamDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddJSParamDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSParamDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSParamDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveJSParamDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailsByJSName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailsByJSNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSLinkDetailsByJSNameResult" nillable="true" type="q11:ArrayOfJOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailsByMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Machine" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailsByMachineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSLinkDetailsByMachineResult" nillable="true" type="q12:ArrayOfJOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailByJSName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailByJSNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSLinkDetailByJSNameResult" nillable="true" type="q13:JOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailByKeyCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Keycode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLinkDetailByKeyCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSLinkDetailByKeyCodeResult" nillable="true" type="q14:JOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLDetailByJSLID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSLID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSLDetailByJSLIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSLDetailByJSLIDResult" nillable="true" type="q15:JOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSLinkDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSLinkDetail" nillable="true" type="q16:JOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJSLinkDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddJSLinkDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSLinkDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="JSLinkDetail" nillable="true" type="q17:JOBSPCSMASTER_ICOS_LINK_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSLinkDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJSLinkDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSLinkDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JSLDetailID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveJSLinkDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveJSLinkDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMorseForUTACLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMorseForUTACLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMorseForUTACLotResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TopSideMorse" nillable="true" type="q18:ArrayOfstring" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RightSideMorse" nillable="true" type="q19:ArrayOfstring" />
+        <xs:element minOccurs="0" name="LotDC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMorseForDateCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMorseForDateCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMorseForDateCodeResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TopSideMorse" nillable="true" type="q20:ArrayOfstring" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RightSideMorse" nillable="true" type="q21:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMMDetailsByLotID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMMDetailsByLotIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetMMDetailsByLotIDResult" nillable="true" type="q22:ArrayOfMMARK_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMMDetailByRefID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RefID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMMDetailByRefIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetMMDetailByRefIDResult" nillable="true" type="q23:MMARK_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMMDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="MMDetail" nillable="true" type="q24:MMARK_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMMDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddMMDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMMDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="MMDetail" nillable="true" type="q25:MMARK_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMMDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMMDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkVerified">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkVerifiedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMMarkVerifiedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkEndLotVerified">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkEndLotVerifiedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMMarkEndLotVerifiedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkLotReadyToPack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMMarkLotReadyToPackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMMarkLotReadyToPackResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsForPSI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsForPSIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetJSDetailsForPSIResult" nillable="true" type="q26:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetailForPSI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetailForPSIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJSDetailForPSIResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenedLotDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenedLotDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOpenedLotDetailsResult" nillable="true" type="q27:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHEXAJSDLDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHEXAJSDLDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetHEXAJSDLDetailsResult" nillable="true" type="q28:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMachineDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMachineDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMachineDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMETControledLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsMETControledLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsMETControledLotResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetailForVMBS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsProgress" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsMerge" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJSDetailForVMBSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJSDetailForVMBSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPartialReelAllowedToPack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPartialReelAllowedToPackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPartialReelAllowedToPackResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbortJSDetailForVMBS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbortJSDetailForVMBSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AbortJSDetailForVMBSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanOpenReelJobSpec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanOpenReelJobSpecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CanOpenReelJobSpecResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanOpenTrayJobSpec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanOpenTrayJobSpecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CanOpenTrayJobSpecResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanAllowedToDownloadJobSpec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CanAllowedToDownloadJobSpecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CanAllowedToDownloadJobSpecResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStagesOfLot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStagesOfLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetStagesOfLotResult" nillable="true" type="q29:ArrayOfstring" />
+        <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsByKeyCodeForOEE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KeyCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsByKeyCodeForOEEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetJSDetailsByKeyCodeForOEEResult" nillable="true" type="q30:ArrayOfstring" />
+        <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsByLotID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJSDetailsByLotIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetJSDetailsByLotIDResult" nillable="true" type="q31:ArrayOfJSDOWNLOAD_SUMMARY_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPLVDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="LotDetail" nillable="true" type="q32:LOT_PARTIALQTY_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPLVDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPLVDetailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPLVDetailsByLotID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPLVDetailsByLotIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" minOccurs="0" name="GetPLVDetailsByLotIDResult" nillable="true" type="q33:ArrayOfLOT_PARTIALQTY_VERIFICATION_DTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEPSPackingDateforMV1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEPSPackingDateforMV1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEPSPackingDateforMV1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

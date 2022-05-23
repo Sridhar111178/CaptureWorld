@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TRService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" />
+      <xsd:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITRService_GetJSDetailsByJSName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByJSName" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsByJSName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByJSNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetActiveJSNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveJSNames" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetActiveJSNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActiveJSNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailByJSName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailByJSName" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailByJSName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailByJSNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailByJSID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailByJSID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailByJSID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailByJSIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetParamDetailsByJSRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamDetailsByJSRef" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetParamDetailsByJSRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamDetailsByJSRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetParamDetailByPID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamDetailByPID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetParamDetailByPID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParamDetailByPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSParamDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSParamDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSParamDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSParamDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSParamDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSParamDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSParamDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSParamDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSParamDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSParamDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSParamDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSParamDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailsByJSName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailsByJSName" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailsByJSName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailsByJSNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailsByMachine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailsByMachine" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailsByMachine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailsByMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailByJSName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailByJSName" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailByJSName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailByJSNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailByKeyCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailByKeyCode" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLinkDetailByKeyCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLinkDetailByKeyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLDetailByJSLID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLDetailByJSLID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSLDetailByJSLID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSLDetailByJSLIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSLinkDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSLinkDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddJSLinkDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJSLinkDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSLinkDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSLinkDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSLinkDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSLinkDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSLinkDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSLinkDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_RemoveJSLinkDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveJSLinkDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMorseForUTACLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMorseForUTACLot" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMorseForUTACLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMorseForUTACLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMorseForDateCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMorseForDateCode" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMorseForDateCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMorseForDateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMMDetailsByLotID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMMDetailsByLotID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMMDetailsByLotID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMMDetailsByLotIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMMDetailByRefID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMMDetailByRefID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMMDetailByRefID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMMDetailByRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddMMDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMMDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddMMDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMMDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateMMDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMMDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateMMDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMMDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkVerified_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkVerified" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkVerified_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkVerifiedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkEndLotVerified_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkEndLotVerified" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkEndLotVerified_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkEndLotVerifiedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkLotReadyToPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkLotReadyToPack" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMMarkLotReadyToPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsMMarkLotReadyToPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsForPSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsForPSI" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsForPSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsForPSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetailForPSI_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetailForPSI" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetailForPSI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetailForPSIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetOpenedLotDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenedLotDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetOpenedLotDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpenedLotDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetHEXAJSDLDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHEXAJSDLDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetHEXAJSDLDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHEXAJSDLDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMachineDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetMachineDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMETControledLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsMETControledLot" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsMETControledLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsMETControledLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetailForVMBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetailForVMBS" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateJSDetailForVMBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJSDetailForVMBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsPartialReelAllowedToPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPartialReelAllowedToPack" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_IsPartialReelAllowedToPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPartialReelAllowedToPackResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AbortJSDetailForVMBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbortJSDetailForVMBS" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AbortJSDetailForVMBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbortJSDetailForVMBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanOpenReelJobSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanOpenReelJobSpec" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanOpenReelJobSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanOpenReelJobSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanOpenTrayJobSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanOpenTrayJobSpec" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanOpenTrayJobSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanOpenTrayJobSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanAllowedToDownloadJobSpec_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanAllowedToDownloadJobSpec" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_CanAllowedToDownloadJobSpec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanAllowedToDownloadJobSpecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetStagesOfLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStagesOfLot" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetStagesOfLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStagesOfLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsByKeyCodeForOEE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByKeyCodeForOEE" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsByKeyCodeForOEE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByKeyCodeForOEEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsByLotID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByLotID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetJSDetailsByLotID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJSDetailsByLotIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddPLVDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPLVDetail" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_AddPLVDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPLVDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetPLVDetailsByLotID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPLVDetailsByLotID" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_GetPLVDetailsByLotID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPLVDetailsByLotIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateEPSPackingDateforMV1_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEPSPackingDateforMV1" />
+  </wsdl:message>
+  <wsdl:message name="ITRService_UpdateEPSPackingDateforMV1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEPSPackingDateforMV1Response" />
+  </wsdl:message>
+  <wsdl:portType name="ITRService">
+    <wsdl:operation name="GetJSDetailsByJSName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByJSName" message="tns:ITRService_GetJSDetailsByJSName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByJSNameResponse" message="tns:ITRService_GetJSDetailsByJSName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveJSNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetActiveJSNames" message="tns:ITRService_GetActiveJSNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetActiveJSNamesResponse" message="tns:ITRService_GetActiveJSNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailByJSName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailByJSName" message="tns:ITRService_GetJSDetailByJSName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailByJSNameResponse" message="tns:ITRService_GetJSDetailByJSName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailByJSID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailByJSID" message="tns:ITRService_GetJSDetailByJSID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailByJSIDResponse" message="tns:ITRService_GetJSDetailByJSID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJSDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddJSDetail" message="tns:ITRService_AddJSDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddJSDetailResponse" message="tns:ITRService_AddJSDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetail" message="tns:ITRService_UpdateJSDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetailResponse" message="tns:ITRService_UpdateJSDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/RemoveJSDetail" message="tns:ITRService_RemoveJSDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/RemoveJSDetailResponse" message="tns:ITRService_RemoveJSDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParamDetailsByJSRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetParamDetailsByJSRef" message="tns:ITRService_GetParamDetailsByJSRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetParamDetailsByJSRefResponse" message="tns:ITRService_GetParamDetailsByJSRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParamDetailByPID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetParamDetailByPID" message="tns:ITRService_GetParamDetailByPID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetParamDetailByPIDResponse" message="tns:ITRService_GetParamDetailByPID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJSParamDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddJSParamDetail" message="tns:ITRService_AddJSParamDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddJSParamDetailResponse" message="tns:ITRService_AddJSParamDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJSParamDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddJSParamDetails" message="tns:ITRService_AddJSParamDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddJSParamDetailsResponse" message="tns:ITRService_AddJSParamDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSParamDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/RemoveJSParamDetail" message="tns:ITRService_RemoveJSParamDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/RemoveJSParamDetailResponse" message="tns:ITRService_RemoveJSParamDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailsByJSName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailsByJSName" message="tns:ITRService_GetJSLinkDetailsByJSName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailsByJSNameResponse" message="tns:ITRService_GetJSLinkDetailsByJSName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailsByMachine">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailsByMachine" message="tns:ITRService_GetJSLinkDetailsByMachine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailsByMachineResponse" message="tns:ITRService_GetJSLinkDetailsByMachine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailByJSName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailByJSName" message="tns:ITRService_GetJSLinkDetailByJSName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailByJSNameResponse" message="tns:ITRService_GetJSLinkDetailByJSName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailByKeyCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailByKeyCode" message="tns:ITRService_GetJSLinkDetailByKeyCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSLinkDetailByKeyCodeResponse" message="tns:ITRService_GetJSLinkDetailByKeyCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLDetailByJSLID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSLDetailByJSLID" message="tns:ITRService_GetJSLDetailByJSLID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSLDetailByJSLIDResponse" message="tns:ITRService_GetJSLDetailByJSLID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJSLinkDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddJSLinkDetail" message="tns:ITRService_AddJSLinkDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddJSLinkDetailResponse" message="tns:ITRService_AddJSLinkDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSLinkDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateJSLinkDetail" message="tns:ITRService_UpdateJSLinkDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateJSLinkDetailResponse" message="tns:ITRService_UpdateJSLinkDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSLinkDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/RemoveJSLinkDetail" message="tns:ITRService_RemoveJSLinkDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/RemoveJSLinkDetailResponse" message="tns:ITRService_RemoveJSLinkDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMorseForUTACLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetMorseForUTACLot" message="tns:ITRService_GetMorseForUTACLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetMorseForUTACLotResponse" message="tns:ITRService_GetMorseForUTACLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMorseForDateCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetMorseForDateCode" message="tns:ITRService_GetMorseForDateCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetMorseForDateCodeResponse" message="tns:ITRService_GetMorseForDateCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMMDetailsByLotID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetMMDetailsByLotID" message="tns:ITRService_GetMMDetailsByLotID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetMMDetailsByLotIDResponse" message="tns:ITRService_GetMMDetailsByLotID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMMDetailByRefID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetMMDetailByRefID" message="tns:ITRService_GetMMDetailByRefID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetMMDetailByRefIDResponse" message="tns:ITRService_GetMMDetailByRefID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMMDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddMMDetail" message="tns:ITRService_AddMMDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddMMDetailResponse" message="tns:ITRService_AddMMDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMMDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateMMDetail" message="tns:ITRService_UpdateMMDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateMMDetailResponse" message="tns:ITRService_UpdateMMDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkVerified">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/IsMMarkVerified" message="tns:ITRService_IsMMarkVerified_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/IsMMarkVerifiedResponse" message="tns:ITRService_IsMMarkVerified_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkEndLotVerified">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/IsMMarkEndLotVerified" message="tns:ITRService_IsMMarkEndLotVerified_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/IsMMarkEndLotVerifiedResponse" message="tns:ITRService_IsMMarkEndLotVerified_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkLotReadyToPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/IsMMarkLotReadyToPack" message="tns:ITRService_IsMMarkLotReadyToPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/IsMMarkLotReadyToPackResponse" message="tns:ITRService_IsMMarkLotReadyToPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsForPSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsForPSI" message="tns:ITRService_GetJSDetailsForPSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsForPSIResponse" message="tns:ITRService_GetJSDetailsForPSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetailForPSI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetailForPSI" message="tns:ITRService_UpdateJSDetailForPSI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetailForPSIResponse" message="tns:ITRService_UpdateJSDetailForPSI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenedLotDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetOpenedLotDetails" message="tns:ITRService_GetOpenedLotDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetOpenedLotDetailsResponse" message="tns:ITRService_GetOpenedLotDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHEXAJSDLDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetHEXAJSDLDetails" message="tns:ITRService_GetHEXAJSDLDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetHEXAJSDLDetailsResponse" message="tns:ITRService_GetHEXAJSDLDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetMachineDetails" message="tns:ITRService_GetMachineDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetMachineDetailsResponse" message="tns:ITRService_GetMachineDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMETControledLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/IsMETControledLot" message="tns:ITRService_IsMETControledLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/IsMETControledLotResponse" message="tns:ITRService_IsMETControledLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetailForVMBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetailForVMBS" message="tns:ITRService_UpdateJSDetailForVMBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateJSDetailForVMBSResponse" message="tns:ITRService_UpdateJSDetailForVMBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPartialReelAllowedToPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/IsPartialReelAllowedToPack" message="tns:ITRService_IsPartialReelAllowedToPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/IsPartialReelAllowedToPackResponse" message="tns:ITRService_IsPartialReelAllowedToPack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortJSDetailForVMBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AbortJSDetailForVMBS" message="tns:ITRService_AbortJSDetailForVMBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AbortJSDetailForVMBSResponse" message="tns:ITRService_AbortJSDetailForVMBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanOpenReelJobSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/CanOpenReelJobSpec" message="tns:ITRService_CanOpenReelJobSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/CanOpenReelJobSpecResponse" message="tns:ITRService_CanOpenReelJobSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanOpenTrayJobSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/CanOpenTrayJobSpec" message="tns:ITRService_CanOpenTrayJobSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/CanOpenTrayJobSpecResponse" message="tns:ITRService_CanOpenTrayJobSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanAllowedToDownloadJobSpec">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/CanAllowedToDownloadJobSpec" message="tns:ITRService_CanAllowedToDownloadJobSpec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/CanAllowedToDownloadJobSpecResponse" message="tns:ITRService_CanAllowedToDownloadJobSpec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStagesOfLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetStagesOfLot" message="tns:ITRService_GetStagesOfLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetStagesOfLotResponse" message="tns:ITRService_GetStagesOfLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsByKeyCodeForOEE">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByKeyCodeForOEE" message="tns:ITRService_GetJSDetailsByKeyCodeForOEE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByKeyCodeForOEEResponse" message="tns:ITRService_GetJSDetailsByKeyCodeForOEE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsByLotID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByLotID" message="tns:ITRService_GetJSDetailsByLotID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetJSDetailsByLotIDResponse" message="tns:ITRService_GetJSDetailsByLotID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPLVDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/AddPLVDetail" message="tns:ITRService_AddPLVDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/AddPLVDetailResponse" message="tns:ITRService_AddPLVDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPLVDetailsByLotID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/GetPLVDetailsByLotID" message="tns:ITRService_GetPLVDetailsByLotID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/GetPLVDetailsByLotIDResponse" message="tns:ITRService_GetPLVDetailsByLotID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEPSPackingDateforMV1">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITRService/UpdateEPSPackingDateforMV1" message="tns:ITRService_UpdateEPSPackingDateforMV1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITRService/UpdateEPSPackingDateforMV1Response" message="tns:ITRService_UpdateEPSPackingDateforMV1_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITRService" type="tns:ITRService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetJSDetailsByJSName">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailsByJSName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveJSNames">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetActiveJSNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailByJSName">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailByJSName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailByJSID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailByJSID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJSDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddJSDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateJSDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/RemoveJSDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParamDetailsByJSRef">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetParamDetailsByJSRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParamDetailByPID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetParamDetailByPID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJSParamDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddJSParamDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJSParamDetails">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddJSParamDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSParamDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/RemoveJSParamDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailsByJSName">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSLinkDetailsByJSName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailsByMachine">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSLinkDetailsByMachine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailByJSName">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSLinkDetailByJSName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLinkDetailByKeyCode">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSLinkDetailByKeyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSLDetailByJSLID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSLDetailByJSLID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJSLinkDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddJSLinkDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSLinkDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateJSLinkDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveJSLinkDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/RemoveJSLinkDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMorseForUTACLot">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetMorseForUTACLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMorseForDateCode">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetMorseForDateCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMMDetailsByLotID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetMMDetailsByLotID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMMDetailByRefID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetMMDetailByRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMMDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddMMDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMMDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateMMDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkVerified">
+      <soap:operation soapAction="http://tempuri.org/ITRService/IsMMarkVerified" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkEndLotVerified">
+      <soap:operation soapAction="http://tempuri.org/ITRService/IsMMarkEndLotVerified" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMMarkLotReadyToPack">
+      <soap:operation soapAction="http://tempuri.org/ITRService/IsMMarkLotReadyToPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsForPSI">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailsForPSI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetailForPSI">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateJSDetailForPSI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpenedLotDetails">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetOpenedLotDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHEXAJSDLDetails">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetHEXAJSDLDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineDetails">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetMachineDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMETControledLot">
+      <soap:operation soapAction="http://tempuri.org/ITRService/IsMETControledLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJSDetailForVMBS">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateJSDetailForVMBS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPartialReelAllowedToPack">
+      <soap:operation soapAction="http://tempuri.org/ITRService/IsPartialReelAllowedToPack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbortJSDetailForVMBS">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AbortJSDetailForVMBS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanOpenReelJobSpec">
+      <soap:operation soapAction="http://tempuri.org/ITRService/CanOpenReelJobSpec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanOpenTrayJobSpec">
+      <soap:operation soapAction="http://tempuri.org/ITRService/CanOpenTrayJobSpec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanAllowedToDownloadJobSpec">
+      <soap:operation soapAction="http://tempuri.org/ITRService/CanAllowedToDownloadJobSpec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStagesOfLot">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetStagesOfLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsByKeyCodeForOEE">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailsByKeyCodeForOEE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJSDetailsByLotID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetJSDetailsByLotID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPLVDetail">
+      <soap:operation soapAction="http://tempuri.org/ITRService/AddPLVDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPLVDetailsByLotID">
+      <soap:operation soapAction="http://tempuri.org/ITRService/GetPLVDetailsByLotID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEPSPackingDateforMV1">
+      <soap:operation soapAction="http://tempuri.org/ITRService/UpdateEPSPackingDateforMV1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TRService">
+    <wsdl:port name="BasicHttpBinding_ITRService" binding="tns:BasicHttpBinding_ITRService">
+      <soap:address location="http://168.232.225.162:87/TRServices/TRService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

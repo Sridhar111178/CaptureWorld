@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EOLDBService.TRServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://168.232.225.162:87/TRServices/TRService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfJOBSPCSMASTER_ICOS_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JOBSPCSMASTER_ICOS_DTO" nillable="true" type="tns:JOBSPCSMASTER_ICOS_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJOBSPCSMASTER_ICOS_DTO" nillable="true" type="tns:ArrayOfJOBSPCSMASTER_ICOS_DTO" />
+  <xs:complexType name="JOBSPCSMASTER_ICOS_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COMFILE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HADLERFILE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISACTIVE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JOBSPECNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSREF" type="ser:guid" />
+      <xs:element minOccurs="0" name="JSSEQNO" type="xs:int" />
+      <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDON" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JOBSPCSMASTER_ICOS_DTO" nillable="true" type="tns:JOBSPCSMASTER_ICOS_DTO" />
+  <xs:complexType name="ArrayOfJOBSPCMASTER_ICOS_PARAMS_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JOBSPCMASTER_ICOS_PARAMS_DTO" nillable="true" type="tns:JOBSPCMASTER_ICOS_PARAMS_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJOBSPCMASTER_ICOS_PARAMS_DTO" nillable="true" type="tns:ArrayOfJOBSPCMASTER_ICOS_PARAMS_DTO" />
+  <xs:complexType name="JOBSPCMASTER_ICOS_PARAMS_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CUSTOMEFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DELETEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DELETEDON" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FILENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILEPATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISFILEACTIVE" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSPSEQNO" type="xs:int" />
+      <xs:element minOccurs="0" name="JSREF" type="ser:guid" />
+      <xs:element minOccurs="0" name="PARAMNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAMSOURCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAMSTATE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PARAMSTATEVALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAMTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARAMVALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDON" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JOBSPCMASTER_ICOS_PARAMS_DTO" nillable="true" type="tns:JOBSPCMASTER_ICOS_PARAMS_DTO" />
+  <xs:complexType name="ArrayOfJOBSPCSMASTER_ICOS_LINK_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JOBSPCSMASTER_ICOS_LINK_DTO" nillable="true" type="tns:JOBSPCSMASTER_ICOS_LINK_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJOBSPCSMASTER_ICOS_LINK_DTO" nillable="true" type="tns:ArrayOfJOBSPCSMASTER_ICOS_LINK_DTO" />
+  <xs:complexType name="JOBSPCSMASTER_ICOS_LINK_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CUSTOMEFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMEFLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISACTIVE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JOBSPECNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSLSEQNO" type="xs:int" />
+      <xs:element minOccurs="0" name="JSREF" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="KEYCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MACHINEID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REMARKS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDON" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JOBSPCSMASTER_ICOS_LINK_DTO" nillable="true" type="tns:JOBSPCSMASTER_ICOS_LINK_DTO" />
+  <xs:complexType name="ArrayOfMMARK_VERIFICATION_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MMARK_VERIFICATION_DTO" nillable="true" type="tns:MMARK_VERIFICATION_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMMARK_VERIFICATION_DTO" nillable="true" type="tns:ArrayOfMMARK_VERIFICATION_DTO" />
+  <xs:complexType name="MMARK_VERIFICATION_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CUSTOM_FIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOM_FIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOM_FIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOM_FIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOM_FLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOM_FLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOM_FLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOM_FLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ENDLOTVERDURATION" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ENDLOTVERIFIEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ENDLOTVERIFIEDON" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ISENDLOTVERIFIED" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISJSDOWNLOADED" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISMARKINGVERFIED" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISQABUYOFF" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISREADYTOPACK" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSDOWNLOADEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JSDOWNLOADEDON" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MMVSeqID" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QAVERDURATION" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="QAVERIFIEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QAVERIFIEDON" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VERIFIEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VERIFIEDON" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MMARK_VERIFICATION_DTO" nillable="true" type="tns:MMARK_VERIFICATION_DTO" />
+  <xs:complexType name="ArrayOfJSDOWNLOAD_SUMMARY_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JSDOWNLOAD_SUMMARY_DTO" nillable="true" type="tns:JSDOWNLOAD_SUMMARY_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJSDOWNLOAD_SUMMARY_DTO" nillable="true" type="tns:ArrayOfJSDOWNLOAD_SUMMARY_DTO" />
+  <xs:complexType name="JSDOWNLOAD_SUMMARY_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CUSTLOTID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CarrierTapeBatch1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierTapeBatch2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierTapePartNo1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarrierTapePartNo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoverTapeBatch1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoverTapeBatch2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoverTapePartNo1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoverTapePartNo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISSPCFAILED" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ISSPCFAILRESOLVED" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTaper1Active" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTaper2Active" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JSDOWNLOADSEQNO" type="xs:long" />
+      <xs:element minOccurs="0" name="KeyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LotQty" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RefID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RequestDuration" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RequestStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPCRESOUTIONCMNTS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIALFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIALFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIALFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIALFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPECIALFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JSDOWNLOAD_SUMMARY_DTO" nillable="true" type="tns:JSDOWNLOAD_SUMMARY_DTO" />
+  <xs:complexType name="LOT_PARTIALQTY_VERIFICATION_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CUSTOMER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFIELD5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG1" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG2" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG3" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG4" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CUSTOMFLAG5" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FULLTRYS" type="xs:int" />
+      <xs:element minOccurs="0" name="LOTID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOTQTY" type="xs:int" />
+      <xs:element minOccurs="0" name="PACKTYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTAYMAP1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTAYMAP2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTAYMAP3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTAYMAP4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTAYMAP5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PARTIALQTY" type="xs:int" />
+      <xs:element minOccurs="0" name="PARTIALTRAYS" type="xs:int" />
+      <xs:element minOccurs="0" name="QVALSEQID" type="xs:int" />
+      <xs:element minOccurs="0" name="RESULT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="STAGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRAYSIZE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDBY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATEDON" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LOT_PARTIALQTY_VERIFICATION_DTO" nillable="true" type="tns:LOT_PARTIALQTY_VERIFICATION_DTO" />
+  <xs:complexType name="ArrayOfLOT_PARTIALQTY_VERIFICATION_DTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LOT_PARTIALQTY_VERIFICATION_DTO" nillable="true" type="tns:LOT_PARTIALQTY_VERIFICATION_DTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLOT_PARTIALQTY_VERIFICATION_DTO" nillable="true" type="tns:ArrayOfLOT_PARTIALQTY_VERIFICATION_DTO" />
+</xs:schema>
